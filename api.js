@@ -1,4 +1,5 @@
 var axios = require("axios");
+var moment = require("moment");
 
 var apis = {
     bands: function (band) {
@@ -12,7 +13,7 @@ var apis = {
                 for (var i = 0; i < response.data.length; i++) {
                     console.log("Venue Name: " + response.data[i].venue.name 
                     + "\nVenue City: " + response.data[i].venue.city
-                    + "\nEvent Time: " + response.data[i].datetime + "\n"); //// need to use moment to format as "MM/DD/YYYY"
+                    + "\nEvent Time: " + moment(response.data[i].datetime).format("MMM Do YYYY") + "\n"); //// need to use moment to format as "MM/DD/YYYY"
                 }
             }
         );
