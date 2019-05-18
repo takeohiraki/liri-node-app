@@ -50,10 +50,11 @@ var apis = {
         // Call API
         axios.get(url).then(
             function(response) {
+                console.log(response.data.Ratings)
                     console.log("Title: " + response.data.Title
                     + "\nYear: " + response.data.Year
-                    + "\nRating: " + response.data.Ratings.Source  /////////////
-                    + "\nRotten Tomatoes Rating: " + response.data.Ratings[2]   //////
+                    + "\nRating: " + response.data.imdbRating
+                    + "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value
                     + "\nCountry Produced: " + response.data.country
                     + "\nLanguage: " + response.data.Language
                     + "\nPlot: " + response.data.Plot

@@ -1,13 +1,9 @@
-
-
 require("dotenv").config();
 var keys = require("./keys.js")
 var inquirer = require("inquirer")
 var apis = require("./api.js")
 var fs = require("fs");
 
-
-//console.log(spotify)
 
 inquirer.prompt([
     {
@@ -68,10 +64,6 @@ var userPick = function(response) {
                 
                 // Then split it by commas (to make it more readable)
                 var dataArr = data.split(",");
-                
-                // We will then re-display the content as an array for later use.
-                // console.log(dataArr[0]);
-                // console.log(dataArr[1]);
 
                 switch(dataArr[0]){
                     case 'concert-this':
